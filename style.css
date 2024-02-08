@@ -12,7 +12,8 @@ body{
 }
 .right{
     width: 75vw;
-    margin: 20px 0px;    
+    margin: 20px 0px;   
+    position: relative; 
 }
 .home ul li{
     display: flex;
@@ -64,6 +65,7 @@ body{
 }
 .header{
     display: flex;
+    height: 60px;
     justify-content: space-between;
     background: rgb(67, 67, 67);
 }
@@ -78,6 +80,9 @@ body{
     gap: 20px;
     margin: 20px;
     flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 50vh;
+    scrollbar-width: none;
 }
 .playlists .card{
     position:relative;
@@ -85,6 +90,10 @@ body{
     border-radius: 5px;
     padding: 5px;
     background: rgb(67, 67, 67);
+    transition: all 0.5s ease-out;
+}
+.card:hover{
+    background-color: rgb(85, 85, 85);
 }
 .card > *{
     padding-top: 8px;
@@ -99,4 +108,50 @@ body{
     top:10%;
     right: 27%;
     transition: all 1s ease-out;
+    opacity: 0.0;
+}
+.play:hover{
+    opacity: 0.7;
+}
+.signupbtn{
+    background: rgb(27, 27, 27);
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    margin: 0px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.signupbtn:hover{
+    background: rgb(103, 102, 102);
+    color: rgb(209, 208, 208);
+    padding: auto;
+}
+.loginbtn{
+    background: white;
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    margin: 0px 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.loginbtn:hover{
+    background: rgb(103, 102, 102);
+    color: rgb(209, 208, 208);
+    padding: auto;
+}
+.playbar{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background-color: green;
+    width: 100%;
+}
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
